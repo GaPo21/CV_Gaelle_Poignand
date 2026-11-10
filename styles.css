@@ -289,3 +289,62 @@ footer > a:last-child { color: #397fae; }
   .hero-logos img { max-width: 76px; max-height: 30px; }
   .hero-bottom { left: 6vw; right: 6vw; bottom: 58px; max-width: none; }
 }
+/* Navigation des quatre familles de réalisations */
+.realisation-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 35px 0 65px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.realisation-menu a {
+  padding: 15px 12px;
+  color: var(--navy);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  transition: background .2s, color .2s;
+}
+
+.realisation-menu a:hover {
+  color: white;
+  background: var(--navy-2);
+}
+
+.subsection-heading {
+  scroll-margin-top: 100px;
+}
+
+.references {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.references a {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.references a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .realisation-menu {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .realisation-menu a {
+    font-size: 11px;
+    padding: 12px 8px;
+  }
+}
