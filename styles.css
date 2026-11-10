@@ -542,4 +542,12 @@ body.video-open { overflow:hidden; }
   .demo-card { padding: 14px; }
   .demo-card > .demo-image { height: 210px; max-height: 210px; }
 }
+.hero-logos {
+    background: #fff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    width: fit-content;
+    margin-top: -18px;
+}
 
