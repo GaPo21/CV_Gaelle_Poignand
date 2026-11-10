@@ -403,3 +403,41 @@ body.video-open { overflow:hidden; }
   .hero-portrait { width: min(43vw, 155px); }
   .demo-image.video-preview { height: 190px; max-height: 190px; }
 }
+
+
+/* Correction navigation : bandeau principal et sous-menu des réalisations persistants. */
+.site-header {
+  position: sticky !important;
+  top: 0;
+  z-index: 1200;
+  isolation: isolate;
+}
+/* Le menu est un bloc indépendant du titre et reste sous le bandeau principal. */
+#menu-realisations {
+  position: sticky !important;
+  top: 78px;
+  z-index: 1100;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 42px;
+  padding: 14px 0;
+  background: rgba(255,255,255,.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 8px 18px rgba(7,27,50,.08);
+}
+/* Le titre 1.1 commence sous les onglets, jamais sur leur droite. */
+#realisations-intro { display: block; }
+#refrigerateurs, #generateurs, #banc, #propagations {
+  scroll-margin-top: 150px;
+}
+@media (max-width: 800px) {
+  #menu-realisations { top: 70px; grid-template-columns: repeat(2, minmax(0,1fr)); }
+  #refrigerateurs, #generateurs, #banc, #propagations { scroll-margin-top: 138px; }
+}
+@media (max-width: 540px) {
+  .site-header { position: sticky !important; top: 0; }
+  #menu-realisations { top: 92px; gap: 7px; padding: 9px 0; }
+  #refrigerateurs, #generateurs, #banc, #propagations { scroll-margin-top: 150px; }
+}
