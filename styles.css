@@ -213,3 +213,40 @@ footer > a:last-child { color: #397fae; }
   .project-gallery a { height: 155px; min-height: 0; }
   .demo-image { min-height: 0; height: 180px; max-height: 200px; }
 }
+
+
+/* Logos institutionnels dans l'angle inférieur droit de la page de garde */
+.hero-logos {
+  position: absolute;
+  z-index: 2;
+  right: 7vw;
+  bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  max-width: 42%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.92);
+}
+.hero-logos img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 105px;
+  max-height: 42px;
+  object-fit: contain;
+}
+.hero-bottom { right: 48%; max-width: 44%; }
+@media (max-width: 800px) {
+  .hero-logos { right: 7vw; bottom: 12px; max-width: 55%; gap: 9px; }
+  .hero-logos img { max-width: 78px; max-height: 32px; }
+  .hero-bottom { right: auto; max-width: 42%; bottom: 20px; font-size: 8px; }
+}
+@media (max-width: 540px) {
+  .hero { padding-bottom: 110px; }
+  .hero-logos { right: 6vw; bottom: 12px; left: 6vw; max-width: none; justify-content: center; gap: 12px; }
+  .hero-logos img { max-width: 76px; max-height: 30px; }
+  .hero-bottom { left: 6vw; right: 6vw; bottom: 58px; max-width: none; }
+}
