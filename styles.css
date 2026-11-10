@@ -24,7 +24,9 @@
     overflow: hidden;
     border-radius: 10px;
 }
-
+.hero-portrait {
+    transform: translateY(-28px);
+}
 .work-image a {
     display: block;
     line-height: 0;
@@ -217,6 +219,12 @@ footer > a:last-child { color: #397fae; }
 
 /* Logos institutionnels dans l'angle inférieur droit de la page de garde */
 .hero-logos {
+    background: #fff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    width: fit-content;
+    margin-top: -18px;
   position: absolute;
   z-index: 2;
   right: 7vw;
@@ -231,6 +239,7 @@ footer > a:last-child { color: #397fae; }
   background: rgba(255,255,255,.92);
 }
 .hero-logos img {
+   filter: none;
   display: block;
   width: auto;
   height: auto;
